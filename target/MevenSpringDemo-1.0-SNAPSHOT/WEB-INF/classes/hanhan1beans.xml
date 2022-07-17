@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--    导入base-package设定目录下所有标签配置-->
+    <context:component-scan base-package="hanhan1"/>
+
+<!--    在配置中使用bean标签实现注入-->
+<!--    <bean class="hanhan1.Dao.Impl.UserDaoMybatisImpl" id="testDao"/>-->
+<!--    <bean class="hanhan1.Service.UserService">-->
+<!--        <property name="dao" ref="testDao"/>-->
+<!--    </bean>-->
+</beans>

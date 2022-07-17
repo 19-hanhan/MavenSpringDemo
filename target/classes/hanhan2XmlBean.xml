@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    静态工厂方法返回dao-->
+    <bean class="hanhan2.Factory.BeanFactory" factory-method="CreateXmlAccountDaoStatic" id="accountDao"></bean>
+
+<!--    实例工厂方法返回dao-->
+<!--    <bean class="hanhan1.Factory.BeanFactory" id="beanFactory"/>-->
+<!--    <bean class="hanhan1.Dao.Impl.AccountDaoXmlImpl" id="accountDao" factory-bean="beanFactory" factory-method="CreateXmlAccountDao"/>-->
+
+<!--    配置Service中的dao对象-->
+    <bean class="hanhan2.Service.Impl.AccountXmlServiceImpl">
+        <property name="dao" ref="accountDao"/>
+    </bean>
+</beans>

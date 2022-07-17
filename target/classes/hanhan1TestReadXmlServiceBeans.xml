@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<message>
+    <className id="testDao" class="hanhan1.Dao.Impl.UserDaoJdbcImpl"/>
+    <property class="hanhan1.Service.TestReadXmlByDomService">
+        <variable>dao</variable>
+        <bind>testDao</bind>
+    </property>
+</message>
